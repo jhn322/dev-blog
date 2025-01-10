@@ -11,15 +11,14 @@ const SearchButton = () => {
       siteMetadata.search.provider === 'algolia' ? AlgoliaButton : KBarButton
 
     return (
-      <SearchButtonWrapper aria-label="Search">
+      <SearchButtonWrapper aria-label="Search" className="cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="themed-link h-6 w-6 text-gray-900 hover:text-light-red
-          dark:text-gray-100 dark:hover:text-dark-red"
+          className="h-6 w-6 text-gray-900 hover:text-light-red dark:text-gray-100 dark:hover:text-dark-red"
         >
           <path
             strokeLinecap="round"
