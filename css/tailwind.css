@@ -58,3 +58,22 @@ input:-webkit-autofill:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Themeable components */
+@layer components {
+  .themed-link {
+    @apply text-light-red hover:text-light-altRed dark:text-dark-red dark:hover:text-dark-altRed;
+  }
+
+  .themed-border {
+    @apply border-light-red dark:border-dark-red;
+  }
+
+  .themed-bg {
+    @apply bg-light-red text-white hover:bg-light-altRed dark:bg-dark-red dark:hover:bg-dark-altRed;
+  }
+
+  .themed-focus {
+    @apply focus:border-light-red focus:ring-light-red dark:focus:border-dark-red dark:focus:ring-dark-red;
+  }
+}
