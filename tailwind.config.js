@@ -39,7 +39,17 @@ const config = {
           900: '#712028',
           950: '#3f0d12',
         },
-        gray: colors.gray,
+        gray: {
+          ...colors.gray,
+          900: '#343837',
+          800: '#343837',
+          700: '#343837',
+          500: '#343837',
+          400: '#DBDBDB',
+          300: '#343837',
+          200: '#343837',
+          100: '#DBDBDB',
+        },
         light: {
           green: '#5EBC61',
           altRed: '#8D2733',
@@ -57,7 +67,7 @@ const config = {
           black: '#211A12',
           teal: '#3E5654',
           lightGray: '#DBDBDB',
-          gray: '#C7CCCB',
+          gray: '#DBDBDB',
           blue: '#4EC6EF',
         },
       },
@@ -86,6 +96,13 @@ const config = {
             code: {
               color: theme('colors.indigo.500'),
             },
+            color: theme('colors.light.gray'),
+            p: {
+              color: theme('colors.light.gray'),
+            },
+            'h1,h2,h3,h4,h5,h6': {
+              color: theme('colors.gray.900'),
+            },
           },
         },
         invert: {
@@ -99,6 +116,10 @@ const config = {
             },
             'h1,h2,h3,h4,h5,h6': {
               color: theme('colors.gray.100'),
+            },
+            color: theme('colors.dark.lightGray'),
+            p: {
+              color: theme('colors.dark.lightGray'),
             },
           },
         },

@@ -91,3 +91,18 @@ input:-webkit-autofill:focus {
     @apply focus:border-light-red focus:ring-light-red dark:focus:border-dark-red dark:focus:ring-dark-red;
   }
 }
+
+/* Search modal styles */
+.search-modal {
+  @apply bg-light-teal/10 dark:bg-dark-teal/10;
+}
+
+/* Search result highlight */
+.search-highlight {
+  @apply bg-light-red/10 dark:bg-dark-red/10;
+}
+
+/* Cursor styles */
+.search-cursor {
+  @apply cursor-pointer bg-light-red/20 dark:bg-dark-red/20;
+}
