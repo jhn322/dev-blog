@@ -2,7 +2,7 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Space_Grotesk } from 'next/font/google'
+import { IBM_Plex_Serif, Noto_Sans } from 'next/font/google' // import fonts
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -12,10 +12,24 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
-const space_grotesk = Space_Grotesk({
+/* Loading and configuring two fonts for headings and body text
+Both fonts are configured with specific weights, latin character subset,
+and CSS variables for use in styling */
+
+// * IBM Plex Serif - FONT for headings
+const ibm_plex_serif = IBM_Plex_Serif({
   subsets: ['latin'],
+  weight: ['400', '600', '700'],
   display: 'swap',
-  variable: '--font-space-grotesk',
+  variable: '--font-ibm-plex-serif',
+})
+
+// * Noto Sans - FONT for body text
+const noto_sans = Noto_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+  variable: '--font-noto-sans',
 })
 
 export const metadata: Metadata = {
@@ -64,7 +78,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      /* Apply IBM Plex Serif and Noto Sans fonts on the whole website */
+      className={`${ibm_plex_serif.variable} ${noto_sans.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link
@@ -94,7 +109,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
+      {/* apply font-noto-sans to the whole website */}
+      <body className="font-noto-sans bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
