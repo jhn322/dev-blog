@@ -5,6 +5,7 @@ import colors from 'tailwindcss/colors'
 
 const config = {
   content: [
+    './node_modules/pliny/**/*.js',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
