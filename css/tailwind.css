@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Apply IBM Plex Serif font to all heading elements */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-ibm-plex-serif;
+  }
+}
+
 .task-list-item::before {
   @apply hidden;
 }
@@ -27,8 +39,10 @@
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */

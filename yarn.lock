@@ -1310,6 +1310,11 @@
   resolved "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.9.tgz"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
+"@fontsource/ibm-plex-serif@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/@fontsource/ibm-plex-serif/-/ibm-plex-serif-5.1.1.tgz"
+  integrity sha512-5EVMKXP2kT5/sufDp2Hw96Zz5C7J6oBq13OWIGn2uhtGAsuE5E+e6hhUl0TJK0+EHYTfCS85ylcY5Vk2Q6ht/Q==
+
 "@giscus/react@^3.0.0":
   version "3.1.0"
   resolved "https://registry.npmjs.org/@giscus/react/-/react-3.1.0.tgz"
