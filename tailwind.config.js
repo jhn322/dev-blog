@@ -1,16 +1,16 @@
-// @ts-check
-const { fontFamily } = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+import typography from '@tailwindcss/typography'
+import forms from '@tailwindcss/forms'
+import { fontFamily } from 'tailwindcss/defaultTheme'
+import colors from 'tailwindcss/colors'
 
-/** @type {import("tailwindcss/types").Config } */
-module.exports = {
+const config = {
   content: [
-    './node_modules/pliny/**/*.js',
-    './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,tsx}',
-    './components/**/*.{js,ts,tsx}',
-    './layouts/**/*.{js,ts,tsx}',
-    './data/**/*.mdx',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './layouts/**/*.{js,ts,jsx,tsx,mdx}',
+    './data/**/*.{js,ts,jsx,tsx,mdx}',
+    './lib/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -73,5 +73,7 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [typography, forms],
 }
+
+export default config
