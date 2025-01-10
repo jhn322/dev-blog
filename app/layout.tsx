@@ -110,7 +110,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       {/* apply font-noto-sans to the whole website */}
-      <body className="font-noto-sans bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
+      <body className="bg-light-beige pl-[calc(100vw-100%)] font-noto-sans text-light-gray antialiased dark:bg-dark-black dark:text-dark-lightGray">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
