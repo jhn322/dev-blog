@@ -1,6 +1,4 @@
-# Semurai Dev Blog
-
-![Semurai Dev Blog](/data/logo.svg)
+#  ![Semurai Dev Blog](/data/logo.svg)  Semurai Dev Blog
 
 A developer blog focused on software development, technical insights, and best practices. Built with modern web technologies, this blog aims to share knowledge and experiences in software development.
 
