@@ -21,7 +21,9 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "contentlayer2": "0.5.3",
     "esbuild": "0.20.2",
+    "formidable": "latest",
     "github-slugger": "^2.0.0",
+    "glob": "latest",
     "gray-matter": "^4.0.2",
     "hast-util-from-html-isomorphic": "^2.0.0",
     "image-size": "1.0.0",
@@ -44,6 +46,7 @@
     "remark-gfm": "^4.0.0",
     "remark-github-blockquote-alert": "^1.2.1",
     "remark-math": "^6.0.0",
+    "superagent": "latest",
     "tailwindcss": "^3.4.14",
     "unist-util-visit": "^5.0.0"
   },
@@ -75,5 +78,11 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@3.6.1",
+  "peerDependencies": {
+    "@algolia/client-search": "^4.x",
+    "algoliasearch": "^4.x",
+    "react": "^18.2.0",
+    "search-insights": "^2.x"
+  }
 }
