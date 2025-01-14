@@ -110,6 +110,16 @@ div[style*='max-height: 400px'][style*='position: relative'] {
   @apply bg-light-beige dark:bg-dark-black !important;
 }
 
+/* Target the "No results for your search..." text */
+div.block.border-t.border-gray-100.px-4.py-8.text-center.text-gray-400 {
+  @apply bg-light-beige text-black dark:text-white;
+}
+
+/* Optionally, you can also specify styles for dark mode */
+.dark div.block.border-t.border-gray-100.px-4.py-8.text-center.text-gray-400 {
+  @apply bg-dark-black;
+}
+
 /* Target the SVG search icon */
 svg.text-gray-400.dark\:text-gray-300 {
   @apply text-black dark:text-white !important;
@@ -120,6 +130,16 @@ div.h-8.w-full.bg-transparent input {
   @apply bg-white dark:bg-gray-800 !important;
 }
 
+/* Target the input text color */
+input.h-8.w-full.bg-transparent.text-gray-600 {
+  @apply text-gray-800;
+}
+
+/* Optionally, you can also specify styles for dark mode */
+input.h-8.w-full.bg-transparent.text-gray-600 {
+  @apply dark:text-white;
+}
+
 /* Target the date div */
 div.text-gray-400.text-xs {
   @apply text-gray-600 dark:text-gray-100 !important;
@@ -127,7 +147,7 @@ div.text-gray-400.text-xs {
 
 /* Target the placeholder text in the search input */
 input::placeholder {
-  @apply text-red-700 dark:text-gray-300;
+  @apply text-gray-500 dark:text-gray-300;
 }
 
 kbd.inline-block.whitespace-nowrap.rounded {
