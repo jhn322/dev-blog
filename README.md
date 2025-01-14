@@ -1,4 +1,4 @@
-#  ![Semurai Dev Blog](/data/logo.svg)  Semurai Dev Blog
+# ![Semurai Dev Blog](/data/logo.svg) Semurai Dev Blog
 
 A developer blog focused on software development, technical insights, and best practices. Built with modern web technologies, this blog aims to share knowledge and experiences in software development.
 
@@ -28,7 +28,22 @@ npm install
 yarn install
 ```
 
-3. Start the development server:
+3. Initialize and update the submodule:
+
+```bash
+git submodule init
+git submodule update
+```
+
+If you need to clone the submodule anew (if it doesn't exist), run:
+
+```bash
+git submodule add https://github.com/JerrySem/blog-content
+```
+
+This will create a new submodule in the root directory named `blog-content`.
+
+4. Start the development server:
 
 ```bash
 npm run dev
@@ -36,7 +51,7 @@ npm run dev
 yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the blog
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the blog.
 
 ### Project Structure
 
