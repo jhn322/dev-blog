@@ -149,6 +149,8 @@ div.text-gray-200.text-xs {
   @apply text-black dark:text-black !important;
 }
 
+/* --- Tags page styles --- */
+
 /* Target the chat SVG & scroll up button */
 button.rounded-full.bg-gray-200 .h-5.w-5 {
   @apply text-white dark:text-white;
