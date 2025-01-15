@@ -28,7 +28,7 @@ jobs:
 
       - name: Push changes
         run: |
-          git push https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/johansemurai/semurai-dev-blog.git
+          git push https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/SemuraiAB/semurai-dev-blog.git
 
       - name: Build and Deploy
         run: |
