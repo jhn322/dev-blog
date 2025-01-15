@@ -4,6 +4,9 @@ on:
   repository_dispatch:
     types: [blog_content_update]
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
