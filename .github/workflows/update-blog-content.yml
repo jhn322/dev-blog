@@ -26,6 +26,10 @@ jobs:
           git commit -m "Update blog-content submodule" || echo "No changes to commit"
           git push
 
+      - name: Push changes
+        run: |
+          git push https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/johansemurai/semurai-dev-blog.git
+
       - name: Build and Deploy
         run: |
           npm install
