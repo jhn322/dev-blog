@@ -14,6 +14,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Set up Git user
+        run: |
+          git config --global user.email "jerry@semurai.se"
+          git config --global user.name "JerrySem"
+
       - name: Update blog-content submodule
         run: |
           git submodule update --remote blog-content
