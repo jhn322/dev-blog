@@ -1,0 +1,28 @@
+name: Update Blog Content
+
+on:
+  repository_dispatch:
+    types: [blog_content_update]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Update blog-content submodule
+        run: |
+          git submodule update --remote blog-content
+          git add blog-content
+          git commit -m "Update blog-content submodule" || echo "No changes to commit"
+          git push
+
+      - name: Build and Deploy
+        run: |
+          npm install
+          npm run build
+          npm run deploy
