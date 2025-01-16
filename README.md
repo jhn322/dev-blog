@@ -84,7 +84,7 @@ Ctrl + G to open the Git sidebar.
 ```bash
 In the blog folder make a new note or edit an existing one.
 
-When done, click "Stage all", "Commit-and-sync". This will push the changes to the remote repositories and build Vercel.
+When done, click "Stage all", "Commit-and-sync". This will push the changes to the remote repositories.
 ```
 
 ### Project Structure
