@@ -105,11 +105,23 @@ export const Blog = defineDocumentType(() => ({
       // Hanterar både Obsidians format(YAML) och array-format
       transform: (tags) => (Array.isArray(tags) ? tags.map((tag) => tag.toString()) : []),
     },
+    // authors: { type: 'list', of: { type: 'string' } },
+    authors: {
+      type: 'list',
+      of: { type: 'string' },
+      transform: (authors) => {
+        // Om authors är en array med strängar (t.ex. från Obsidian)
+        if (Array.isArray(authors)) {
+          return authors.map((author) => author.toString())
+        }
+        // Om authors är en sträng (t.ex. "Jerry")
+        return authors ? [authors.toString()] : []
+      },
+    },
     lastmod: { type: 'date' },
     draft: { type: 'boolean' },
     summary: { type: 'string' },
     images: { type: 'json' },
-    authors: { type: 'list', of: { type: 'string' } },
     layout: { type: 'string' },
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
