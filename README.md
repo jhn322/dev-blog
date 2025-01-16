@@ -10,14 +10,16 @@ This guide will help you set up the Semurai Dev Blog locally on your machine.
 
 - Node.js 18+
 - npm or yarn
+- Obsidian app
 
 ### Installation Steps
 
-1. Clone the repository:
+1. Clone the repositories:
 
 ```bash
-git clone https://github.com/semurai/dev-blog.git
-cd dev-blog
+git clone https://github.com/SemuraiAB/semurai-dev-blog.git
+git clone https://github.com/SemuraiAB/blog-content.git
+cd semurai-dev-blog
 ```
 
 2. Install dependencies:
@@ -38,7 +40,7 @@ git submodule update
 If you need to clone the submodule anew (if it doesn't exist), run:
 
 ```bash
-git submodule add https://github.com/JerrySem/blog-content
+git submodule add https://github.com/SemuraiAB/blog-content
 ```
 
 This will create a new submodule in the root directory named `blog-content`.
@@ -52,6 +54,38 @@ yarn dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the blog.
+
+#### Obsidian Setup
+
+1.
+
+```bash
+Install the Obsidian app from their website: https://obsidian.md/
+```
+
+2.
+
+```bash
+Click on "Manage Vault" -> "Open folder as vault" -> Select the "blog-content" folder -> Click "Open".
+```
+
+3.
+
+```bash
+Go to "Settings" -> "Community plugins" -> Enable and "Browse community plugins" -> Search for "Git" -> Install.
+
+Restart Obsidian to activate the plugin.
+
+Ctrl + G to open the Git sidebar.
+```
+
+4.
+
+```bash
+In the blog folder make a new note or edit an existing one.
+
+When done, click "Stage all", "Commit-and-sync". This will push the changes to the remote repositories and build Vercel.
+```
 
 ### Project Structure
 
